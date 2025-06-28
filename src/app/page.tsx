@@ -26,7 +26,6 @@ const calculateTimeLeft = (targetDate: string): CountdownTime => {
 };
 
 const EsyaLandingPage: React.FC = () => {
-  const [isPlayingVideo, setIsPlayingVideo] = useState(false);
   const targetDate = '2025-07-21T09:00:00'; 
   const [timeLeft, setTimeLeft] = useState<CountdownTime>(calculateTimeLeft(targetDate));
 
@@ -56,10 +55,6 @@ const EsyaLandingPage: React.FC = () => {
     );
   });
 
-  const handlePlayVideo = () => {
-    setIsPlayingVideo(true);
-    console.log("Playing ESYA '25 Teaser Video!");
-  };
 
   const speakers = [
     { name: 'Dr. Anya Sharma', title: 'AI Ethics Lead, QuantumLabs', image: 'avatar_1.png' },
@@ -113,12 +108,11 @@ const EsyaLandingPage: React.FC = () => {
           </div>
 
           <p className="text-xl md:text-3xl lg:text-4xl font-light text-gray-400 mt-6 font-rajdhani">
-            Unleashing Tomorrow's Innovations
+            Unleashing Tomorrow&apos;s Innovations
           </p>
 
           <div className="mt-12">
             <button
-              onClick={handlePlayVideo}
               className="group relative inline-flex items-center justify-center px-8 py-4 text-xl font-orbitron uppercase tracking-wide
               text-white border border-transparent rounded-full overflow-hidden
               bg-gradient-to-r from-blue-600 via-cyan-500 to-teal-400 hover:from-blue-500 hover:via-cyan-400 hover:to-teal-300
@@ -172,7 +166,7 @@ const EsyaLandingPage: React.FC = () => {
                     <div className="relative z-10 flex flex-col items-center">
                         <TrendingUp className="h-16 w-16 text-emerald-400 mb-4 animate-float-icon animation-delay-600" />
                         <h3 className="text-2xl font-semibold mb-2 font-orbitron text-emerald-300">Tech Frontiers</h3>
-                        <p className="text-gray-400 text-base font-rajdhani">Spotlight on disruptive innovations and the startups shaping tomorrow's landscape.</p>
+                        <p className="text-gray-400 text-base font-rajdhani">Spotlight on disruptive innovations and the startups shaping tomorrow&apos;s landscape.</p>
                     </div>
                 </div>
             </div>
@@ -231,7 +225,7 @@ const EsyaLandingPage: React.FC = () => {
             </h2>
             <div className="relative bg-gray-900 bg-opacity-70 rounded-lg p-8 border border-blue-700 shadow-xl">
                 <p className="text-lg text-gray-300 mb-6 font-rajdhani">
-                    ESYA '25 will take place at the state-of-the-art **Innovation Center Auditorium**,
+                    ESYA &apos;25 will take place at the state-of-the-art **Innovation Center Auditorium**,
                     a premier venue designed for immersive experiences and groundbreaking discussions.
                     Prepare to be inspired in an environment fostering collaboration and technological advancement.
                 </p>
@@ -251,14 +245,14 @@ const EsyaLandingPage: React.FC = () => {
         <section className="w-full max-w-2xl bg-gray-900 bg-opacity-70 rounded-lg p-6 border border-blue-700 shadow-xl animate-fade-in-up animation-delay-1300">
           <h3 className="text-2xl font-bold mb-4 text-blue-300 font-orbitron">Initiation Sequence in:</h3>
           <div className="flex justify-center flex-wrap">
-              {timerComponents.length ? timerComponents : <span className="text-2xl text-white font-orbitron">ESYA '25 is LIVE!</span>}
+              {timerComponents.length ? timerComponents : <span className="text-2xl text-white font-orbitron">ESYA &apos;25 is LIVE!</span>}
           </div>
         </section>
 
       </main>
 
       <footer id="contact" className="relative z-20 w-full pt-8 pb-4 text-gray-500 text-sm text-center font-rajdhani border-t border-gray-800 bg-gray-900 bg-opacity-30 mt-16">
-        <p className="mb-4">&copy; {new Date().getFullYear()} ESYA '25. IIIT Delhi. All rights reserved.</p>
+        <p className="mb-4">&copy; {new Date().getFullYear()} ESYA &apos;25. IIIT Delhi. All rights reserved.</p>
         <div className="flex justify-center space-x-6 text-xl">
             <a href="https://github.com/iiitd" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors duration-300">
                 <Github className="h-7 w-7" />
